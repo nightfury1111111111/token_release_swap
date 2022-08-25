@@ -71,6 +71,7 @@ async function releaseToken() {
       if (poolIsExist) {
         console.log("Start swap...");
         if (tokenBalance > 0) {
+          await tokenMivr.approve(contract3, tokenBalance);
           await pancakeswapRouter.swapExactTokensForTokens(
             // check if it is a correct function name and high gas fee
             tokenBalance,
