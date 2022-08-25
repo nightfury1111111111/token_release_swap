@@ -4,11 +4,15 @@ const tokenAbi = require("./token.json");
 const SwapABI = require("./swap.json");
 const factoryABI = require("./factory.json");
 
+let status = false;
+let round = 0;
+
 const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
 async function releaseToken() {
+  round++;
   console.log("--- Token Release and Swap on Pancakeswap ---");
   console.log("start ...");
   const contract1 = "0x63CE2c823ACD03f1B31FF725430083F291D557c6";
@@ -84,6 +88,8 @@ async function releaseToken() {
               gasPrice: 500000,
             }
           );
+
+          status = true;
           console.log("swap is finished. Check your wallet please");
         } else console.log("You don't have MIVR token now in your wallet");
       } else {
@@ -99,9 +105,9 @@ async function releaseToken() {
   }
 }
 
-releaseToken()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+(async () => {
+  while (!status) {
+    console.log("====round====", round);
+    await releaseToken();
+  }
+})();
