@@ -1,0 +1,48 @@
+{
+  "name": "fmarket-picasso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start1": "npx hardhat run scripts/release/releaseToken1.js",
+    "start2": "npx hardhat run scripts/release/releaseToken2.js",
+    "start3": "npx hardhat run scripts/release/releaseToken3.js",
+    "start4": "npx hardhat run scripts/release/releaseToken4.js",
+    "start5": "npx hardhat run scripts/release/releaseToken5.js",
+    "start6": "npx hardhat run scripts/release/releaseToken6.js",
+    "start7": "npx hardhat run scripts/release/releaseToken7.js",
+    "start8": "npx hardhat run scripts/release/releaseToken8.js",
+    "start9": "npx hardhat run scripts/release/releaseToken9.js",
+    "start10": "npx hardhat run scripts/release/releaseToken10.js",
+    "start11": "npx hardhat run scripts/release/releaseToken11.js",
+    "start12": "npx hardhat run scripts/release/releaseToken12.js",
+    "start13": "npx hardhat run scripts/release/releaseToken13.js",
+    "start14": "npx hardhat run scripts/release/releaseToken14.js",
+    "start15": "npx hardhat run scripts/release/releaseToken15.js",
+    "start16": "npx hardhat run scripts/release/releaseToken16.js",
+    "test": "npx hardhat --network localhost test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@rari-capital/solmate": "^6.2.0",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.1",
+    "bignumber.js": "^9.0.2",
+    "bn.js": "^5.2.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^16.0.0",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.5",
+    "hardhat": "^2.9.3",
+    "hardhat-gas-reporter": "^1.0.8"
+  },
+  "devDependencies": {
+    "hardhat-contract-sizer": "^2.5.1"
+  }
+}
